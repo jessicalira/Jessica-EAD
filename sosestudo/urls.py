@@ -15,9 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import IndexView
+from core.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', IndexView.as_view(), name='index') 
+    path('', IndexView.as_view(), name='index'),
+    path('segundapagina/', SegundaPaginaView.as_view(), name='segundapagina'),
+    path('terceirapagina/', TerceiraPaginaView.as_view(), name='terceirapagina'),
+    path('quartapagina/', QuartaPaginaView.as_view(), name='quartapagina'),
+    path('quintapagina/', QuintaPaginaView.as_view(), name='quintapagina'),
+    path('sextapagina/', SextaPaginaView.as_view(), name='sextapagina')
+
 ]

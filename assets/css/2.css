@@ -73,7 +73,7 @@ body {
     text-align: center;
     
 }
-# conteudo-1 {
+#conteudo-1 {
     float:left;
     /* diminuimos a largura para não quebrar o layout. 
     * valor antigo 220
@@ -103,5 +103,5 @@ body {
 #rodape {
     clear:both;
     padding:1px;
-    background:#d8d7cf
+    background:#d8d7cf;
 }

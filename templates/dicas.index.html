@@ -1,8 +1,9 @@
-<!DOCTYPE htm>
+{% load static %}
+<!DOCTYPE html>
 <html lang="pt-br" />
 
 <head>
-    <link rel = "shortcut icon" type = "imagem/x-icon" href = "s/favicon2.ico" width: 100%/>
+    <link rel = "shortcut icon" type = "imagem/x-icon" href = "{% static 'img/ico.png' %}" width: 100%>
 
     <main>
     <meta charset="UTF-8" />
@@ -12,7 +13,7 @@
     </p>
 
 
-    <link rel="stylesheet" type="text/css" href="2.css">
+    <link href="{% static 'css/play.css' %}" rel="stylesheet" type="text/css">
        
 
 </head>
@@ -27,18 +28,18 @@
             <div id="geral"></div>
             <center>
             <font face="Times New Roman" color="ForestGreen"</font>
-            <img src="s/c3.img.png" alt="Capa" title= "Foto de capa" width: "100%" height: "100%";>
+            <img src="{% static 'img/capa2.img.png' %}" alt="Capa" title="Foto de capa" width: "100%">
                
             </center>
     
         
     </div>
 
-    <div id="menu">
+    <div id="menu" style="font-size: 25px">
                     
                 <ul>
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-                    <li><a href="file:///C:/Users/jessi/Desktop/estagio.index.html">INICIO</a></li>
+                    <li><a href="{% url 'index' %}">INICIO</a></li>
                     <li><a href="https://www.ifpb.edu.br/"><i></i> IFPB</a></li>
                     <li><a href="https://classroom.google.com/"> GOOGLE CLASSROON</a></li>
                     <li><a href="https://suap.ifpb.edu.br/accounts/login/?next=/"> SUAP</a></li>
@@ -65,9 +66,9 @@
                      <h2 style="font-size: 20px" align="left">Por: Jéssica Lira</h2>
                      
                      <p>  <br/><br/></p>
-                     <p>  <br/><br/></p>
-                     <p style="font-size: 30px" align="Justify">01. Crie um ambiente de estudos, para que você estude todos os dias e pegue o habito de estudar, assim, com um tempo você vai estar totalmente acostumado(a) com a rotina.</p>
-                     <p> <br/><br/> </p>
+                    
+                    <p style="font-size: 30px" align="Justify">01. Crie um ambiente de estudos, para que você estude todos os dias e pegue o habito de estudar, assim, com um tempo você vai estar totalmente acostumado(a) com a rotina.</p>
+                    <p> <br/><br/> </p>
                     <p style="font-size: 30px" align="Justify">02. Esteja sempre olhando os perfis do IFPB, para que assim você não perca nada! e esteja mais próximo de certa forma, se tornando um aluno atento, para não perder nem uma oportunidade, nem aulas síncronas e muito menos atividades. Aqui no site, no menu, temos os links que te levará até os instagrans do IF, ao site, ao Classroom e até mesmo ao suap. Visite-os pelo menos duas vezes por semana, se possível, todos os dias.</p>
                     <p>  <br/><br/></p>
                     <p style="font-size: 30px" align="Justify">03. Participe dos grupos do Whatsapp. Lá eles sempre estão falando de algo relacionado aos projetos expostos nas redes sociais e site do IF.</p>
@@ -93,7 +94,7 @@
                     <p style="font-size: 30px" align="Justify">13. Se encontre nos estudos, ache algo que lhe ajude a aprender mais depressa, que funcione e lhe traga bons retornos.</p>
 
                    <p>  <br/><br/></p>
-                   <p>  <br/><br/></p>
+                  
                 
     
             
@@ -102,21 +103,16 @@
                         <p>
                         <p>  <br/><br/></p>
                         <h1 align="left">Veja Também:</h1>
-                        
                     
-                    
-                       
-        
-
-                        <a href="file:///C:/Users/jessi/Desktop/estagio/aplicativos.index.html"><img src="s/app.img.png" alt="Melhores aplicativos para ajudar nos seus estudos."/ width="20%" ></a> 
-                        <a href="file:///C:/Users/jessi/Desktop/estagio.index.html"><img src="s/aprende.img.png" alt=" Como aprender mais rápido?."/ width="20%" ></a>
-                        <a href="file:///C:/Users/jessi/Desktop/estagio/play.index.html"><img src="s/playlist.img.png" alt="Playlist de estudos."/ width="20%" ></a>
-                        <a href="file:///C:/Users/jessi/Desktop/estagio/canais.index.html"><img src="s/video.img.png" alt="Indicações de canais de estudo."/ width="20%" ></a>
+                        <a href="{% url 'quintapagina' %}"><img src="{% static 'img/s/app.img.png' %}" alt="Melhores aplicativos para ajudar nos seus estudos."/ width="20%" ></a>
+                        <a href="{% url 'index' %}"><img src="{% static 'img/s/aprende.img.png' %}" alt=" Como aprender mais rápido?."/ width="20%" ></a>
+                        <a href="{% url 'terceirapagina' %}"><img src="{% static 'img/s/playlist.img.png'%}" alt="Playlist de estudos."/ width="20%" ></a>
+                        <a href="{% url 'quartapagina' %}"><img src="{% static 'img/s/video.img.png' %}" alt="Indicações de canais de estudo."/ width="20%" ></a>
 
 
                        <p>  <br/><br/></p>
-                       <a href="file:///C:/Users/jessi/Desktop/estagio/canais.index.html"><img src="s/anterior.img.png"align="left" alt="voltar a página anterior."/ width="4%" ></a>
-                       <a href="file:///C:/Users/jessi/Desktop/estagio/aplicativos.index.html"><img src="s/procimo.img.png" align="right" alt="ir a página seguinte."/ width="4%" ></a>
+                       <a href="{% url 'quartapagina' %}"><img src="{% static 'img/s/anterior.img.png' %}" align="left" alt="voltar a página anterior."/ width="4%" ></a>
+                       <a href="{% url 'quintapagina' %}"><img src="{% static 'img/s/procimo.img.png' %}" align="right" alt="ir a página seguinte."/ width="4%" ></a>
                     
                         
                         
@@ -127,18 +123,20 @@
 
             </div>
             <div id="conteudo-2-2">
-                <font face="courier New" color="grey"</font>
+                <font face="courier New" color="black"</font>
                 <center>
-                <img src="s/c.img.png" alt="JÉSSICA LIRA" title=""Foto da criadora da página"" width="200">
+                <p>  <br/><br/></p>
+                <img src="{% static 'img/e.img.png' %}" alt="JÉSSICA LIRA" title="Foto da criadora da página" width="200">
                 <h2>Quem sou?</h2>
-                <p align="Justify"> Olá, me chamo Jéssica. Sou estudante do IFPB campus Cajazeiras. Criei esse site, no estilo de um Blog com a finalidade de ajudar vocês a ser produtivos, fazendo com que consigam cumprir todas as atividades propostas pelo campus e terem um ótimo rendimento escolar.</p>
+                
+                <p align="Justify" style="font-size: 25px"> Olá, me chamo Jéssica. Sou estudante do IFPB campus Cajazeiras. Criei esse site, no estilo de um Blog com a finalidade de ajudar vocês a ser produtivos, fazendo com que consigam cumprir todas as atividades propostas pelo campus e terem um ótimo rendimento escolar.
                <p>  <br/><br/></p>
-                <h2>Dicas Úteis</h2>
-               <img src="s/importante.img.jpeg" alt="Dicas" title="Dicas importantes de estudo." width="100%">
-               <p>  <br/><br/></p>
+                <h2 style="font-size: 25px">Dicas Úteis</h2>
+               <img src="{% static 'img/importante1.img.jpeg' %}" alt="Dicas" title="Dicas importantes de estudo." width="100%">
+                <p>  <br/><br/></p>
               
-                 <h2>Descubra a profissão perfeita para você</h2>
-                <a href="https://pt.quizur.com/quiz/qual-sua-profissao-ideal-para-voce-AHLq"><img src="s/q1.img.png" align="right" alt="Quiz de carreira profissional"/ width="100%" ></a>
+                 <h2 style="font-size: 25px">Descubra a profissão perfeita para você</h2>
+                <a href="https://pt.quizur.com/quiz/qual-sua-profissao-ideal-para-voce-AHLq"><img src="{% static 'img/q1.img.png' %}" align="right" alt="Quiz de carreira profissional"/ width="100%" ></a>
                 </center>
             
             </div>
@@ -147,7 +145,7 @@
     <div id="rodape">
         <center>
         <font face="helvetica" color="black"</font>
-        <h5>Espero ter ajudado, Boa Sorte.</h5>
+        <h5 style="font-size: 20px">Espero ter ajudado, Boa Sorte.</h5>
         </center>
     </div>
 </div>
