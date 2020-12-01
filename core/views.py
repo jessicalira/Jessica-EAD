@@ -4,8 +4,7 @@ from django.views.generic import ListView, DetailView, TemplateView
 
 
 class IndexView(TemplateView):
-
-    template_name = "estagio.index.html"
+    template_name = "index.html"
 
 
 class SegundaPaginaView(TemplateView):
