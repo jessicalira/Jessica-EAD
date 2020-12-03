@@ -2,7 +2,7 @@
 {
     transform: rotate(90deg);
 
-    -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=1)';
+ -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=1)';
 }
 .bx-rotate-180
 {
@@ -27,4 +27,5 @@
     transform: scaleY(-1);
 
     -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)';
+    
 }

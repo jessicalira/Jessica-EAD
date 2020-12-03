@@ -10,7 +10,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #f8e1fe;
+  color: #000000;
 }
 
 a {
@@ -329,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   position: fixed;
-  background: #f8e1fe;
+  background: black;
   overflow: hidden;
   display: none;
   transition: ease-in-out 0.2s;
@@ -393,7 +393,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h2 {
-  color: #f8e1fe;
+  color: gray;
   margin-bottom: 50px;
   font-size: 24px;
 }
@@ -451,7 +451,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding-bottom: 60px;
+  /*padding-bottom: 60px;*/
   overflow: hidden;
 }
 
